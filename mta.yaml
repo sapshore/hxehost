@@ -1,16 +1,24 @@
 ID: hxehost
 _schema-version: '2.0'
 version: 0.0.1
-
 modules:
- - name: abhi_db
-   type: hdb
-   path: abhi_db
-   requires:
-    - name: hdi_abhi_db
-
+  - name: abhi_db
+    type: hdb
+    path: abhi_db
+    requires:
+      - name: hdi_abhi_db
+  - name: abhi_js
+    type: nodejs
+    path: abhi_js
+    provides:
+      - name: abhi_js_api
+        properties:
+          url: '${default-url}'
+    requires:
+      - name: abhi_db
+      - name: hdi_abhi_db
 resources:
- - name: hdi_abhi_db
-   properties:
-      hdi-container-name: ${service-name}
-   type: com.sap.xs.hdi-container
+  - name: hdi_abhi_db
+    properties:
+      hdi-container-name: '${service-name}'
+    type: com.sap.xs.hdi-container

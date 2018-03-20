@@ -1,0 +1,14 @@
+PROCEDURE "hxehost.abhi_db.procs::getCustomers" ( OUT ex_cust "hxehost.abhi_db.db::MyContext.TT_Customer")
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+   READS SQL DATA AS
+BEGIN
+   /*************************************
+       Write your procedure logic 
+   *************************************/
+   
+     ex_cust = select "CustId", "Name", 
+            "City" from "hxehost.abhi_db.db::MyContext.Customer" ;
+            
+END

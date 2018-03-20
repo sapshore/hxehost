@@ -1,0 +1,25 @@
+PROCEDURE "hxehost.abhi_db.procs::addCustomer" ( IN lv_name varchar(40), IN lv_city varchar(40) )
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+   AS
+BEGIN
+   /*************************************
+       Write your procedure logic 
+   *************************************/
+   
+   DECLARE lv_custid string;
+   DECLARE lv_cnt int;
+   
+   select count(*) into lv_cnt from "hxehost.abhi_db.db::MyContext.Customer";
+   
+   lv_cnt = lv_cnt + 1 ;
+   lv_custid = lv_cnt;
+   
+   
+   INSERT INTO "hxehost.abhi_db.db::MyContext.Customer" VALUES(
+	lv_cnt/*CustId <Integer>*/,
+	lv_name/*Name <NVARCHAR(40)>*/,
+	lv_city/*City <NVARCHAR(40)>*/
+);
+END

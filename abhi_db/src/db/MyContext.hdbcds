@@ -1,0 +1,17 @@
+namespace hxehost.abhi_db.db;
+
+context MyContext {
+
+    /*@@layout{"layoutInfo":{"x":80,"y":51.5}}*/
+    entity Customer {
+        key CustId : Integer not null;
+            Name   : String(40);
+            City   : String(40);
+    };
+    
+    table type TT_Customer {
+        CustId : Integer;
+        Name  : String(40);
+        City   : String(40);
+    };
+};
