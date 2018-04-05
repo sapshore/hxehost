@@ -1,0 +1,17 @@
+{
+	"type": "sap.html5",
+	"builders": {
+		"default": "ui5-builder",
+		"configs": {}
+	},
+	"runners": {
+		"configs": {}
+	},
+	"attributes": {
+		"mta_module_parent": ["/hxehost"],
+		"sap.watt.common.setting": [
+			"{\"generation\":[{\"templateId\":\"hanatemplates.masterDetailstemplate\",\"templateVersion\":\"1.38.1\",\"dateTimeStamp\":\"Thu, 05 Apr 2018 06:49:00 GMT\"}],\"mockpreview\":{\"mockUri\":\"/services/customer.xsodata\",\"metadataFilePath\":\"\",\"loadJSONFiles\":false,\"loadCustomRequests\":false,\"mockRequestsFilePath\":\"\"},\"basevalidator\":{\"services\":{\"js\":\"jsValidator\",\"xml\":\"xmlValidator\"}}}"
+		]
+	},
+	"mixinTypes": ["mtamodule"]
+}
