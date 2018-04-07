@@ -26,6 +26,15 @@ modules:
         properties:
           name: abhi_js_be
           url: '~{url}'
+  - name: mysapui5
+    type: html5
+    path: mysapui5
+    requires:
+      - name: abhi_js_api
+        group: destinations
+        properties:
+          name: abhi_js_be
+          url: '~{url}'
 resources:
   - name: hdi_abhi_db
     properties:

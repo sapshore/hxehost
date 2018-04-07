@@ -1,0 +1,5 @@
+{
+	"welcomeFile": "webapp/index.html",
+	"authenticationMethod": "none",
+	"routes": [{ "source": "/services/customer.xsodata/", "destination": "abhi_js_be" }]
+}

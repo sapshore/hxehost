@@ -1,0 +1,15 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="mysapui5.controller.App" displayBlock="true">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+				    <List items="{/customers}" noDataText="Drop list items here" id="__list0">
+				        
+				            <StandardListItem type="Navigation" title="{CustId}" description="{Name}" icon="sap-icon://picture" id="__item0"/>
+				        
+				    </List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
